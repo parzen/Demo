@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de-DE"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<!-- Meta Angaben für Suchmaschinen -->
+	<meta charset="UTF-8">
+	<meta name="description" content="Hidden Games Tatort">
+	<meta name="robots" content="none">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="KEPAU%20Generatoren-Dateien/jquery-latest.js"></script>
+
+	<!-- Text in der Titelleiste des Browsers -->
+	<title>KEPAU Generatoren</title>
+
+	<!-- Einbinden der CSS Dateien -->
+	<link href="KEPAU%20Generatoren-Dateien/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/loader.js"></script><link id="load-css-0" rel="stylesheet" type="text/css" href="KEPAU%20Generatoren-Dateien/tooltip.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="KEPAU%20Generatoren-Dateien/util.css"><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_fw_module.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/dygraph-tickers-combined.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/webfont.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_line_module.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_corechart_module.js"></script><script src="chartjs/chart.js"></script><script src="chartjs-plugin-annotation-0.5.7/chartjs-plugin-annotation.js"></script></head>
+<body>
+
+	<div id="login_header">
+		<div class="text_master">
+			<a href="https://www.kepau.de/index.php"><img src="KEPAU%20Generatoren-Dateien/Logo.png" width="150px"></a>
+		</div>
+	</div> <!-- Ende login_header -->
+
+	<script>
+    function show_userlogin() {
+        document.getElementById("userlogin").style.display = "block";
+        document.getElementById("userloginbutton").style.display = "none";
+    }
+
+    function show(element,Image_ID) {
+        document.getElementById(element).style.display = "block";
+        if (Image_ID == '1') {
+            hide('lastgang2');
+            hide('lastgang3');
+            hide('lastgang4');
+        } else if (Image_ID == '2') {
+            hide('lastgang1');
+            hide('lastgang3');
+            hide('lastgang4');
+        } else if (Image_ID == '3') {
+            hide('lastgang1');
+            hide('lastgang2');
+            hide('lastgang4');
+        } else if (Image_ID == '4') {
+            hide('lastgang3');
+            hide('lastgang2');
+            hide('lastgang1');
+        } else {
+
+        }
+    }
+
+    function hide(element) {
+        document.getElementById(element).style.display = "none";
+    }
+
+    function phonecall() {
+        $.ajax({
+            url:'cfg/phonecall.php',
+            type:'POST',
+            dataType: "html",
+            success:function(results) {
+                //jQuery("#portal_content_action").html(results);
+                //
+            }
+        });
+    }
+</script>
+
+        <div id="dashboard_background">
+            <div id="dashboard">
+                <div id="dashboard_menu">
+                    <div class="dashboard_menu_row"><img src="KEPAU%20Generatoren-Dateien/Button1.png" class="dashboard_menu_icon">Menü</div>
+                    <div class="dashboard_menu_row"><img src="KEPAU%20Generatoren-Dateien/Button2.png" class="dashboard_menu_icon">Home</div>
+                    <div class="dashboard_menu_row"><img src="KEPAU%20Generatoren-Dateien/Button3.png" class="dashboard_menu_icon">Verbindung</div>
+                    <div class="dashboard_menu_row dashboard_menu_active"><img src="KEPAU%20Generatoren-Dateien/Button4.png" class="dashboard_menu_icon">Analyse</div>
+                    <div class="dashboard_menu_row"><img src="KEPAU%20Generatoren-Dateien/Button5.png" class="dashboard_menu_icon">Alarme</div>
+                </div>
+                <div id="dashboard_content">
+                    <div id="dashboard_content_headline">Produkt HI329187HM</div>
+                    <div id="chart" class="lastgang_container">
+                        <div class="headlines" style="display: none">Leistung am Ausgang des Generators [Watt]:</div>
+                        <div class="chart-container">
+                            <canvas id="generatorChart"></canvas>
+                        </div>
+                    </div>
+                    <div id="leistungswerte">
+                        <div id="leistungswerte_headline">Folgende Verbraucher wurden bisher vom Generator erkannt:</div>
+                        <div class="row"></div>
+                        <div class="leistungswert_container">
+                            <!-- <img src="design/Licht1.png" class="leistungswert_image" > -->
+                            💡 Licht 1<br>2.000<br>Watt
+                        </div>
+                        <div class="leistungswert_container">
+                            <!-- <img src="design/Licht2.png" class="leistungswert_image" > -->
+                            💡 Licht 2<br>3.000<br>Watt
+                        </div> 
+                        <div class="leistungswert_container">
+                            <!-- <img src="design/Licht3.png" class="leistungswert_image" > -->
+                            💡 Licht 3<br>5.000<br>Watt
+                        </div> 
+                        <div class="leistungswert_container">
+                            <!-- <img src="design/Licht4.png" class="leistungswert_image" > -->
+                            💡 Licht 4<br>5.000<br>Watt
+                        </div> 
+                        <div class="leistungswert_container">
+                            <!-- <img src="design/Licht5.png" class="leistungswert_image" > -->
+                            💡 Licht 5<br>7.5000<br>Watt
+                        </div>
+                        <div class="leistungswert_container">
+                            <!-- <img src="design/Licht6.png" class="leistungswert_image" > -->
+                            💡 Licht 6<br>3.500<br>Watt
+                        </div> 
+                        <div class="row"></div>
+                    </div>
+                </div>
+                <div class="row"></div>
+            </div> <!-- Ende dashboard -->
+        </div> <!-- Ende dashboard_background -->
+
+
+	<div id="login_footer">
+		<div class="text_master">
+			Kontakt:<br><br>
+			Kepau GmbH<br>
+			Waldstraße 17-21<br>
+			47874 Wildeshausen<br><br>
+			<a href="https://www.kepau.de/index.php?show=impressum">Impressum</a>
+		</div>
+	</div> <!-- Ende login_footer -->
+
+
+
+<script>
+var ctx = document.getElementById('generatorChart').getContext('2d');
+Chart.defaults.global.defaultFontSize = 10;
+var chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'Freitag, 31.01.2020',
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2000, 2000, 2000, 7000, 2000, 9700, 5800, 2000, 2000, 0, 0, 0],
+            steppedLine: 'true',
+            borderColor: 'blue',
+            borderWidth: 1,
+            backgroundColor: 'transparent'
+        },
+        {
+            label: 'Samstag, 01.02.2020',
+            data: [0, 2000, 2000, 2000, 7000, 2000, 9700, 5800, 2000, 2000, 0, 0, 0, 2000, 2000, 2000, 7000, 2000, 9700, 5800, 2000, 2000, 0, 0, 0],
+            steppedLine: 'true',
+            borderColor: 'fuchsia',
+            borderWidth: 1,
+            backgroundColor: 'transparent',
+            hidden: true
+        },
+        {
+            label: 'Sonntag, 02.02.2020',
+            data: [0, 2000, 0, 0, 0, 0, 9700, 5800, 2000, 0, 0, 0, 0, 2000, 0, 2000, 0, 2000, 0, 0, 0, 2000, 0, 0, 0],
+            steppedLine: 'true',
+            borderColor: 'orange',
+            borderWidth: 1,
+            backgroundColor: 'transparent',
+            hidden: true
+        },
+        {
+            label: 'Freitag, 07.02.2020',
+            data: [0, 0, 0, 0, 0, 2000, 5000, 5800, 2000, 2000, 9800, 0, 0, 0, 0, 5000, 0, 0, 0, 0, 2000, 2000, 0, 0, 0],
+            steppedLine: 'true',
+            borderColor: 'green',
+            borderWidth: 1,
+            backgroundColor: 'transparent',
+            hidden: true
+        },
+        {
+            label: 'Samstag, 08.02.2020',
+            data: [0, 2000, 2000, 2000, 2000, 2000, 5000, 5800, 2000, 2000, 9800, 0, 0, 0, 0, 5000, 7000, 7000, 11800, 2000, 2000, 2000, 0, 0, 0],
+            steppedLine: 'true',
+            borderColor: 'purple',
+            borderWidth: 1,
+            backgroundColor: 'transparent',
+            hidden: true
+        },
+        {
+            label: 'Sonntag, 09.02.2020',
+            data: [0, 3000, 3000, 3000, 3000, 0, 0, 0, 2000, 3000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            steppedLine: 'true',
+            borderColor: 'grey',
+            borderWidth: 1,
+            backgroundColor: 'transparent',
+            hidden: true
+        }],
+        labels: ["10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00",
+                  "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"],
+    },
+    options: {
+        title: {
+            text: "Kumulierter Lastgang am Ausgang des Generators",
+            display: true,
+            fontSize: 14,
+            fontColor: 'black',
+            fontFamily: 'Arial'
+        },
+        legend: {
+            position: 'bottom',
+            labels: {
+                fontColor: 'black',
+                fontFamily: 'Arial',
+                usePointStyle: true
+            }
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                    min: '10:30',
+                    max: '22:30'
+                }
+            }],
+            yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    fontSize: 14,
+                    labelString: "Watt",
+                },
+                ticks: {
+                    min: 0,
+                    max: 12000
+                }
+            }]
+        }, annotation: {
+            annotations: [{
+                type: 'box',
+                drawTime: 'beforeDatasetsDraw',
+                xMin: "10:30",
+                xMax: "22:30",
+                yMin: 10000,
+                yMax: 12000,
+                borderWidth: 2,
+                borderColor: 'red',
+                backgroundColor: 'rgba(255, 51, 51, 0.1)',
+                xScaleID: 'x-axis-0',
+                yScaleID: 'y-axis-0'
+            },
+            , {
+              type: 'line',
+              id: 'call-count-1',
+              mode: 'vertical',
+              scaleID: 'x-axis-0',
+              value: "16:30",
+              borderColor: 'transparent',
+              label: {
+                backgroundColor: 'transparent',
+                fontSize: 12,
+                fontStyle: 'italic',
+                fontColor: 'red',
+                position: 'top',
+                enabled: true,
+                content: 'Überlastbereich Notabschaltung'
+              }
+            }   ]
+        }
+    }
+});
+</script>
+</body></html>
