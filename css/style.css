@@ -14,7 +14,6 @@
 
 * {
     box-sizing: border-box;
-    /* erlaubt setzen von padding an allen Elementen ohne width usw */
     padding: 0;
     margin: 0;
 }
@@ -108,7 +107,6 @@ code, pre {
 
 .leistungswerte .flex {
     justify-content: space-evenly;
-    /* RESPONSIVE: Dadurch werden Elemente die nicht in eine Zeile passen automatisch in mehrere geparst */
     flex-wrap: wrap;
 }
 

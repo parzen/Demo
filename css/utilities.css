@@ -1,6 +1,5 @@
 .container {
     max-width: 1200px;
-    /* maximale Breite festlegen */
     margin: 0 auto;
     overflow: auto;
     padding: 0 40px;
@@ -18,7 +17,6 @@
 .btn {
     display: inline-block;
     padding: 10px 30px;
-    /* dadurch hat man eine Hand wenn man auf button klickt */
     cursor: pointer;
     background: var(--primary-clor);
     color: #fff;
@@ -32,7 +30,6 @@
 }
 
 .btn:hover {
-    /* macht buttons bisschen kleiner wenn man drüber geht */
     transform: scale(.98);
 }
 
@@ -126,16 +123,13 @@
 
 .flex {
     display: flex;
-    /* horizontal bei row (column andersrum) */
     justify-content: center;
-    /* vertical bei row (column andersrum) */
     align-items: center;
     height: 100%;
 }
 
 .grid {
     display: grid;
-    /* repeat(2, 1fr) = 1fr 1fr */
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     justify-content: center;
@@ -149,7 +143,6 @@
 
 /* Margin */
 .my-1 {
-    /* 1rem = multiplier of html font-size (default 16px) -> 1rem = 16px*1 */
     margin: 1rem 0;
 }
 

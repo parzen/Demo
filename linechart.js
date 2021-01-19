@@ -136,11 +136,3 @@ var chart = new Chart(ctx, {
         }
     }
 });
-
-// Chart.canvas.parentNode.style.height = '1000px';
-
-// Chart.defaults.global.defaultFontSize = 10;
-// Chart.data.datasets[0].label = "bla";
-
-// Chart.options.title.text = 'new title';
-// Chart.update();
