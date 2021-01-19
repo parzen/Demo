@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/* Custom properties */
+
+:root {
+    --primary-color: #F8CA30;
+    --secondary-color: #941D1F;
+    --dark-color: #0B3858;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+/* Basic style */
+
+* {
+    box-sizing: border-box;
+    /* erlaubt setzen von padding an allen Elementen ohne width usw */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Myriad Pro", "Fedra Sans Std", Arial;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+code, pre {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+/* Header */
+
+.header {
+    background: var(--primary-color);
+}
+
+.header .flex {
+    justify-content: start;
+    padding: 20px 40px;
+}
+
+.header img {
+    width: 150px;
+    justify-self: flex-start;
+}
+
+/* Main */
+
+.main .grid {
+    align-items: flex-start;
+    justify-content: left;
+    grid-template-columns: 2fr 8fr;
+    padding: 0;
+}
+
+.main-content {
+    padding: 0 15px;
+}
+
+.main-content .heading {
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Chart */
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 300px;
+    margin-block-end: 50px;
+}
+
+/* Leistungswerte */
+
+.leistungswerte .flex {
+    justify-content: space-evenly;
+    /* RESPONSIVE: Dadurch werden Elemente die nicht in eine Zeile passen automatisch in mehrere geparst */
+    flex-wrap: wrap;
+}
+
+.leistungswerte .card {
+    margin: 5px;
+    text-align: center;
+}
+
+.leistungswerte .card h4 {
+    font-size: 16px;
+}
+
+/* Nav bar */
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    border: 1px var(--primary-color) solid;
+    text-align: center;
+}
+
+/* Menü */
+
+.navbar li#menu {
+    visibility: hidden;
+    height: 0;
+}
+
+.navbar a, .navbar button {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navbar li:hover {
+    background-color: var(--primary-color);
+}
+
+.navbar img {
+    width: auto;
+}
+
+.show {
+    display: block !important;
+}
+
+/* Footer */
+
+.footer .flex {
+    justify-content: space-between;
+}
+
+.footer .social a {
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    font-weight: bold;
+}
+
+/* Animations */
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+/* Tablets and under */
+
+@media(max-width: 768px) {
+    .main-content {
+        padding: 0;
+        height: auto;
+    }
+    .main .grid {
+        grid-template-columns: 1fr;
+    }
+    .navbar li#menu {
+        visibility: visible;
+        height: auto;
+    }
+    .dropdown-content {
+        display: none;
+    }
+}
+
+/* Mobile */
+
+@media(max-width: 500px) {
+    .chart-container {
+        margin-block-end: 70px;
+    }
+}

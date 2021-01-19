@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>KEPAU Generatoren</title>
+
+    <script type="text/javascript" charset="UTF-8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="chartjs-plugin-annotation-0.5.7/chartjs-plugin-annotation.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container flex py-2">
+            <img src="KEPAU Generatoren-Dateien/Logo.png" alt="">
+        </div>
+    </div>
+
+    <!-- Main -->
+    <section class="main py-4">
+        <div class="container grid">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li id="menu" onclick="toggleMenu()">
+                            <img src="KEPAU Generatoren-Dateien/Button1.png"><a href="#">Menü</a>
+                        </li>
+                        <div id="dropdown-menu" class="dropdown-content">
+                            <li>
+                                <img src="KEPAU Generatoren-Dateien/Button2.png"><a href="#">Home</a>
+                            </li>
+                            <li>
+                                <img src="KEPAU Generatoren-Dateien/Button3.png"><a href="#">Verbindung</a>
+                            </li>
+                            <li class="bg-primary">
+                                <img src="KEPAU Generatoren-Dateien/Button4.png"><a href="#">Analyse</a>
+                            </li>
+                            <li>
+                                <img src="KEPAU Generatoren-Dateien/Button5.png"><a href="#">Alarme</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-content">
+                <div class="heading bg-primary">
+                    Produkt HI329187HM
+                </div>
+                <div class="chart-container">
+                    <div class="text-center my-1">
+                        <h4>Kumulierter Lastgang am Ausgang des Generators</h4>
+                    </div>
+                    <canvas id="generatorChart"></canvas>
+                </div>
+                <div class="leistungswerte">
+                    <div class="text-center my-1">
+                        <h4>Folgende Verbraucher wurden bisher vom Generator erkannt</h4>
+                    </div>
+                    <div class="container flex">
+                        <div class="card">
+                            <h4>💡 Licht 1</h4>
+                            <p>2.000 Watt</p>
+                        </div>
+                        <div class="card">
+                            <h4>💡 Licht 2</h4>
+                            <p>3.000 Watt</p>
+                        </div>
+                        <div class="card">
+                            <h4>💡 Licht 3</h4>
+                            <p>5.000 Watt</p>
+                        </div>
+                        <div class="card">
+                            <h4>💡 Licht 4</h4>
+                            <p>5.000 Watt</p>
+                        </div>
+                        <div class="card">
+                            <h4>💡 Licht 5</h4>
+                            <p>7.500 Watt</p>
+                        </div>
+                        <div class="card">
+                            <h4>💡 Licht 6</h4>
+                            <p>3.500 Watt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-secondary py-4">
+        <div class="container flex">
+            <div>
+                <h2>Kontakt:</h2>
+                <p>Kepau GmbH<br>
+                    Waldstraße 17-21<br>
+                    47874 Wildeshausen<br></p>
+                <a href="https://www.kepau.de/index.php?show=impressum">Impressum</a>
+            </div>
+            <div class="social">
+                <a href="https://www.hidden-games-tatort.de/"><i class="fas fa-globe fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="linechart.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>
