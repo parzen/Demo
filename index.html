@@ -1,137 +1,124 @@
 <!DOCTYPE html>
-<html lang="de-DE"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
 
-	<!-- Meta Angaben für Suchmaschinen -->
-	<meta charset="UTF-8">
-	<meta name="description" content="Hidden Games Tatort">
-	<meta name="robots" content="none">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>KEPAU Generatoren</title>
 
-	<script src="KEPAU%20Generatoren-Dateien/jquery-latest.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="chartjs-plugin-annotation-0.5.7/chartjs-plugin-annotation.js"></script>
+</head>
 
-	<!-- Text in der Titelleiste des Browsers -->
-	<title>KEPAU Generatoren</title>
-
-	<!-- Einbinden der CSS Dateien -->
-	<link href="KEPAU%20Generatoren-Dateien/style.css" rel="stylesheet" type="text/css">
-
-<script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/loader.js"></script><link id="load-css-0" rel="stylesheet" type="text/css" href="KEPAU%20Generatoren-Dateien/tooltip.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="KEPAU%20Generatoren-Dateien/util.css"><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_fw_module.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/dygraph-tickers-combined.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/webfont.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_line_module.js"></script><script type="text/javascript" charset="UTF-8" src="KEPAU%20Generatoren-Dateien/jsapi_compiled_corechart_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script><script type="text/javascript" charset="UTF-8" src="chartjs-plugin-annotation-0.5.7/chartjs-plugin-annotation.js"></script></head>
 <body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container flex py-2">
+            <img src="KEPAU Generatoren-Dateien/Logo.png" alt="">
+        </div>
+    </div>
 
-	<div id="login_header">
-		<div class="text_master">
-			<a href="https://www.kepau.de/index.php"><img src="KEPAU%20Generatoren-Dateien/Logo.png" width="150px"></a>
-		</div>
-	</div> <!-- Ende login_header -->
+    <!-- Main -->
+    <section class="main py-4">
+        <div class="container grid">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li id="menu" onclick="toggleMenu()">
+                            <img src="KEPAU Generatoren-Dateien/Button1.png"><a href="#">Menü</a>
+                        </li>
+                        <div id="dropdown-menu" class="dropdown-content">
+                            <li>
+                                <img src="KEPAU Generatoren-Dateien/Button2.png"><a href="#">Home</a>
+                            </li>
+                            <li>
+                                <img src="KEPAU Generatoren-Dateien/Button3.png"><a href="#">Verbindung</a>
+                            </li>
+                            <li class="bg-primary">
+                                <img src="KEPAU Generatoren-Dateien/Button4.png"><a href="#">Analyse</a>
+                            </li>
+                            <li>
+                                <img src="KEPAU Generatoren-Dateien/Button5.png"><a href="#">Alarme</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-content">
+                <div class="heading bg-primary">
+                    Produkt HI329187HM
+                </div>
+                <div class="chart-container">
+                    <div class="text-center my-1">
+                        <h4>Kumulierter Lastgang am Ausgang des Generators</h4>
+                    </div>
+                    <canvas id="generatorChart"></canvas>
+                </div>
+                <div class="leistungswerte">
+                    <div class="text-center my-1">
+                        <h4>Folgende Verbraucher wurden bisher vom Generator erkannt</h4>
+                    </div>
+                    <div class="container flex">
+                        <div class="card">
+                            <h4>💡 Licht 1</h4>
+                            <p>2.000 Watt</p>
+                        </div>
+                        <div class="card">
+                            <h4>💡 Licht 2</h4>
+                            <p>3.000 Watt</p>
+                        </div>
+                        <div class="card">
+                            <h4>💡 Licht 3</h4>
+                            <p>5.000 Watt</p>
+                        </div>
+                        <div class="card">
+                            <h4>💡 Licht 4</h4>
+                            <p>5.000 Watt</p>
+                        </div>
+                        <div class="card">
+                            <h4>💡 Licht 5</h4>
+                            <p>7.500 Watt</p>
+                        </div>
+                        <div class="card">
+                            <h4>💡 Licht 6</h4>
+                            <p>3.500 Watt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<script>
-    function show_userlogin() {
-        document.getElementById("userlogin").style.display = "block";
-        document.getElementById("userloginbutton").style.display = "none";
-    }
-
-    function show(element,Image_ID) {
-        document.getElementById(element).style.display = "block";
-        if (Image_ID == '1') {
-            hide('lastgang2');
-            hide('lastgang3');
-            hide('lastgang4');
-        } else if (Image_ID == '2') {
-            hide('lastgang1');
-            hide('lastgang3');
-            hide('lastgang4');
-        } else if (Image_ID == '3') {
-            hide('lastgang1');
-            hide('lastgang2');
-            hide('lastgang4');
-        } else if (Image_ID == '4') {
-            hide('lastgang3');
-            hide('lastgang2');
-            hide('lastgang1');
-        } else {
-
+    <!-- Footer -->
+    <footer class="footer bg-secondary py-4">
+        <div class="container flex">
+            <div>
+                <h2>Kontakt:</h2>
+                <p>Kepau GmbH<br>
+                    Waldstraße 17-21<br>
+                    47874 Wildeshausen<br></p>
+                <a href="https://www.kepau.de/index.php?show=impressum">Impressum</a>
+            </div>
+            <div class="social">
+                <a href="https://www.hidden-games-tatort.de/"><i class="fas fa-globe fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="linechart.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
         }
-    }
+    </script>
+</body>
 
-    function hide(element) {
-        document.getElementById(element).style.display = "none";
-    }
-
-    function phonecall() {
-        $.ajax({
-            url:'cfg/phonecall.php',
-            type:'POST',
-            dataType: "html",
-            success:function(results) {
-                //jQuery("#portal_content_action").html(results);
-                //
-            }
-        });
-    }
-</script>
-
-        <div id="dashboard_background">
-            <div id="dashboard">
-                <div id="dashboard_menu">
-                    <div class="dashboard_menu_row"><img src="KEPAU%20Generatoren-Dateien/Button1.png" class="dashboard_menu_icon">Menü</div>
-                    <div class="dashboard_menu_row"><img src="KEPAU%20Generatoren-Dateien/Button2.png" class="dashboard_menu_icon">Home</div>
-                    <div class="dashboard_menu_row"><img src="KEPAU%20Generatoren-Dateien/Button3.png" class="dashboard_menu_icon">Verbindung</div>
-                    <div class="dashboard_menu_row dashboard_menu_active"><img src="KEPAU%20Generatoren-Dateien/Button4.png" class="dashboard_menu_icon">Analyse</div>
-                    <div class="dashboard_menu_row"><img src="KEPAU%20Generatoren-Dateien/Button5.png" class="dashboard_menu_icon">Alarme</div>
-                </div>
-                <div id="dashboard_content">
-                    <div id="dashboard_content_headline">Produkt HI329187HM</div>
-                    <div id="chart" class="lastgang_container">
-                        <div class="headlines" style="display: none">Leistung am Ausgang des Generators [Watt]:</div>
-                        <div class="chart-container">
-                            <canvas id="generatorChart"></canvas>
-                        </div>
-                    </div>
-                    <div id="leistungswerte">
-                        <div id="leistungswerte_headline">Folgende Verbraucher wurden bisher vom Generator erkannt:</div>
-                        <div class="row"></div>
-                        <div class="leistungswert_container">
-                            <!-- <img src="design/Licht1.png" class="leistungswert_image" > -->
-                            💡 Licht 1<br>2.000<br>Watt
-                        </div>
-                        <div class="leistungswert_container">
-                            <!-- <img src="design/Licht2.png" class="leistungswert_image" > -->
-                            💡 Licht 2<br>3.000<br>Watt
-                        </div> 
-                        <div class="leistungswert_container">
-                            <!-- <img src="design/Licht3.png" class="leistungswert_image" > -->
-                            💡 Licht 3<br>5.000<br>Watt
-                        </div> 
-                        <div class="leistungswert_container">
-                            <!-- <img src="design/Licht4.png" class="leistungswert_image" > -->
-                            💡 Licht 4<br>5.000<br>Watt
-                        </div> 
-                        <div class="leistungswert_container">
-                            <!-- <img src="design/Licht5.png" class="leistungswert_image" > -->
-                            💡 Licht 5<br>7.5000<br>Watt
-                        </div>
-                        <div class="leistungswert_container">
-                            <!-- <img src="design/Licht6.png" class="leistungswert_image" > -->
-                            💡 Licht 6<br>3.500<br>Watt
-                        </div> 
-                        <div class="row"></div>
-                    </div>
-                </div>
-                <div class="row"></div>
-            </div> <!-- Ende dashboard -->
-        </div> <!-- Ende dashboard_background -->
-
-
-	<div id="login_footer">
-		<div class="text_master">
-			Kontakt:<br><br>
-			Kepau GmbH<br>
-			Waldstraße 17-21<br>
-			47874 Wildeshausen<br><br>
-			<a href="https://www.kepau.de/index.php?show=impressum">Impressum</a>
-		</div>
-	</div> <!-- Ende login_footer -->
-
-<script src="linechart.js"></script>
-</body></html>
+</html>
