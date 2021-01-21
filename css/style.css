@@ -105,7 +105,7 @@ code, pre {
 .chart-container {
     position: relative;
     margin: auto;
-    width: 100%;
+    width: 95%;
     height: 300px;
     margin-block-end: 50px;
 }
@@ -122,8 +122,12 @@ code, pre {
     text-align: center;
 }
 
-.leistungswerte .card h4 {
-    font-size: 16px;
+.leistungswerte .card h4, .leistungswerte .card p {
+    font-size: 15px;
+}
+
+.leistungswerte .container {
+    margin-bottom: 20px;
 }
 
 /* Nav bar */
@@ -165,6 +169,13 @@ code, pre {
 
 .show {
     display: block !important;
+}
+
+/* Main-content */
+
+.main-content .last, .main-content .tank {
+    border: 1px var(--primary-color) solid;
+    margin: 5px;
 }
 
 /* Footer */

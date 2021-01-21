@@ -1,4 +1,4 @@
-var ctx = document.getElementById('chart-generator').getContext('2d');
+var ctx = document.getElementById('chart-tank').getContext('2d');
 Chart.defaults.global.defaultFontSize = 10;
 var chart = new Chart(ctx, {
     type: 'line',
@@ -86,7 +86,7 @@ var chart = new Chart(ctx, {
                 scaleLabel: {
                     display: true,
                     fontSize: 14,
-                    labelString: "Watt",
+                    labelString: "Liter",
                 },
                 ticks: {
                     min: 0,

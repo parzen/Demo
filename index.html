@@ -56,41 +56,51 @@
                     <div class="heading bg-primary">
                         Produkt HI329187HM
                     </div>
-                    <div class="chart-container">
-                        <div class="text-center my-1">
-                            <h4>Kumulierter Lastgang am Ausgang des Generators</h4>
+                    <div class="last">
+                        <div class="chart-container">
+                            <div class="text-center my-1">
+                                <h4>Kumulierter Lastgang am Ausgang des Generators</h4>
+                            </div>
+                            <canvas id="chart-generator"></canvas>
                         </div>
-                        <canvas id="chart-generator"></canvas>
+                        <div class="leistungswerte">
+                            <div class="text-center my-1">
+                                <h5>Folgende Verbraucher wurden bisher vom Generator erkannt</h5>
+                            </div>
+                            <div class="container flex">
+                                <div class="card">
+                                    <h4>💡 Licht 1</h4>
+                                    <p>2.000 Watt</p>
+                                </div>
+                                <div class="card">
+                                    <h4>💡 Licht 2</h4>
+                                    <p>3.000 Watt</p>
+                                </div>
+                                <div class="card">
+                                    <h4>💡 Licht 3</h4>
+                                    <p>5.000 Watt</p>
+                                </div>
+                                <div class="card">
+                                    <h4>💡 Licht 4</h4>
+                                    <p>5.000 Watt</p>
+                                </div>
+                                <div class="card">
+                                    <h4>💡 Licht 5</h4>
+                                    <p>7.500 Watt</p>
+                                </div>
+                                <div class="card">
+                                    <h4>💡 Licht 6</h4>
+                                    <p>3.500 Watt</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="leistungswerte">
-                        <div class="text-center my-1">
-                            <h4>Folgende Verbraucher wurden bisher vom Generator erkannt</h4>
-                        </div>
-                        <div class="container flex">
-                            <div class="card">
-                                <h4>💡 Licht 1</h4>
-                                <p>2.000 Watt</p>
+                    <div class="tank">
+                        <div class="chart-container">
+                            <div class="text-center my-1">
+                                <h4>Tankinhalt des Generators</h4>
                             </div>
-                            <div class="card">
-                                <h4>💡 Licht 2</h4>
-                                <p>3.000 Watt</p>
-                            </div>
-                            <div class="card">
-                                <h4>💡 Licht 3</h4>
-                                <p>5.000 Watt</p>
-                            </div>
-                            <div class="card">
-                                <h4>💡 Licht 4</h4>
-                                <p>5.000 Watt</p>
-                            </div>
-                            <div class="card">
-                                <h4>💡 Licht 5</h4>
-                                <p>7.500 Watt</p>
-                            </div>
-                            <div class="card">
-                                <h4>💡 Licht 6</h4>
-                                <p>3.500 Watt</p>
-                            </div>
+                            <canvas id="chart-tank"></canvas>
                         </div>
                     </div>
                 </div>
@@ -118,6 +128,7 @@
 
     <!-- Scripts -->
     <script src="chart-generator.js"></script>
+    <script src="chart-tank.js"></script>
     <script>
         function toggleMenu() {
             document.getElementById("dropdown-menu").classList.toggle("show");
