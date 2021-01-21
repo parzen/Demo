@@ -1,4 +1,4 @@
-var ctx = document.getElementById('generatorChart').getContext('2d');
+var ctx = document.getElementById('chart-generator').getContext('2d');
 Chart.defaults.global.defaultFontSize = 10;
 var chart = new Chart(ctx, {
     type: 'line',

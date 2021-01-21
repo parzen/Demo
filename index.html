@@ -18,83 +18,85 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="container flex py-2">
-            <a href="index.html"><img src="KEPAU Generatoren-Dateien/Logo.png" alt=""></a>
+    <div class="content">
+        <!-- Header -->
+        <div class="header">
+            <div class="container flex py-2">
+                <a href="index.html"><img src="KEPAU Generatoren-Dateien/Logo.png" alt=""></a>
+            </div>
         </div>
-    </div>
 
-    <!-- Main -->
-    <section class="main py-4">
-        <div class="container grid">
-            <div class="navbar">
-                <nav>
-                    <ul>
-                        <li id="menu" onclick="toggleMenu()">
-                            <img src="KEPAU Generatoren-Dateien/Button1.png"><a href="#">Menü</a>
-                        </li>
-                        <div id="dropdown-menu" class="dropdown-content">
-                            <li>
-                                <img src="KEPAU Generatoren-Dateien/Button2.png"><a href="#">Home</a>
+        <!-- Main -->
+        <section class="main py-4">
+            <div class="container grid">
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <li id="menu" onclick="toggleMenu()">
+                                <img src="KEPAU Generatoren-Dateien/Button1.png"><a href="#">Menü</a>
                             </li>
-                            <li>
-                                <img src="KEPAU Generatoren-Dateien/Button3.png"><a href="#">Verbindung</a>
-                            </li>
-                            <li class="bg-primary">
-                                <img src="KEPAU Generatoren-Dateien/Button4.png"><a href="index.html">Analyse</a>
-                            </li>
-                            <li>
-                                <img src="KEPAU Generatoren-Dateien/Button5.png"><a href="#">Alarme</a>
-                            </li>
+                            <div id="dropdown-menu" class="dropdown-content">
+                                <li>
+                                    <img src="KEPAU Generatoren-Dateien/Button2.png"><a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <img src="KEPAU Generatoren-Dateien/Button3.png"><a href="#">Verbindung</a>
+                                </li>
+                                <li class="bg-primary">
+                                    <img src="KEPAU Generatoren-Dateien/Button4.png"><a href="index.html">Analyse</a>
+                                </li>
+                                <li>
+                                    <img src="KEPAU Generatoren-Dateien/Button5.png"><a href="#">Alarme</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="main-content">
+                    <div class="heading bg-primary">
+                        Produkt HI329187HM
+                    </div>
+                    <div class="chart-container">
+                        <div class="text-center my-1">
+                            <h4>Kumulierter Lastgang am Ausgang des Generators</h4>
                         </div>
-                    </ul>
-                </nav>
+                        <canvas id="chart-generator"></canvas>
+                    </div>
+                    <div class="leistungswerte">
+                        <div class="text-center my-1">
+                            <h4>Folgende Verbraucher wurden bisher vom Generator erkannt</h4>
+                        </div>
+                        <div class="container flex">
+                            <div class="card">
+                                <h4>💡 Licht 1</h4>
+                                <p>2.000 Watt</p>
+                            </div>
+                            <div class="card">
+                                <h4>💡 Licht 2</h4>
+                                <p>3.000 Watt</p>
+                            </div>
+                            <div class="card">
+                                <h4>💡 Licht 3</h4>
+                                <p>5.000 Watt</p>
+                            </div>
+                            <div class="card">
+                                <h4>💡 Licht 4</h4>
+                                <p>5.000 Watt</p>
+                            </div>
+                            <div class="card">
+                                <h4>💡 Licht 5</h4>
+                                <p>7.500 Watt</p>
+                            </div>
+                            <div class="card">
+                                <h4>💡 Licht 6</h4>
+                                <p>3.500 Watt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="main-content">
-                <div class="heading bg-primary">
-                    Produkt HI329187HM
-                </div>
-                <div class="chart-container">
-                    <div class="text-center my-1">
-                        <h4>Kumulierter Lastgang am Ausgang des Generators</h4>
-                    </div>
-                    <canvas id="generatorChart"></canvas>
-                </div>
-                <div class="leistungswerte">
-                    <div class="text-center my-1">
-                        <h4>Folgende Verbraucher wurden bisher vom Generator erkannt</h4>
-                    </div>
-                    <div class="container flex">
-                        <div class="card">
-                            <h4>💡 Licht 1</h4>
-                            <p>2.000 Watt</p>
-                        </div>
-                        <div class="card">
-                            <h4>💡 Licht 2</h4>
-                            <p>3.000 Watt</p>
-                        </div>
-                        <div class="card">
-                            <h4>💡 Licht 3</h4>
-                            <p>5.000 Watt</p>
-                        </div>
-                        <div class="card">
-                            <h4>💡 Licht 4</h4>
-                            <p>5.000 Watt</p>
-                        </div>
-                        <div class="card">
-                            <h4>💡 Licht 5</h4>
-                            <p>7.500 Watt</p>
-                        </div>
-                        <div class="card">
-                            <h4>💡 Licht 6</h4>
-                            <p>3.500 Watt</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer bg-secondary py-4">
@@ -113,7 +115,9 @@
             </div>
         </div>
     </footer>
-    <script src="linechart.js"></script>
+
+    <!-- Scripts -->
+    <script src="chart-generator.js"></script>
     <script>
         function toggleMenu() {
             document.getElementById("dropdown-menu").classList.toggle("show");

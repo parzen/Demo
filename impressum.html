@@ -18,56 +18,59 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="container flex py-2">
-            <a href="index.html"><img src="KEPAU Generatoren-Dateien/Logo.png" alt=""></a>
+    <div class="content">
+        <!-- Header -->
+        <div class="header">
+            <div class="container flex py-2">
+                <a href="index.html"><img src="KEPAU Generatoren-Dateien/Logo.png" alt=""></a>
+            </div>
         </div>
-    </div>
 
-    <!-- Main -->
-    <section class="main py-4">
-        <div class="container grid">
-            <div class="navbar">
-                <nav>
-                    <ul>
-                        <li id="menu" onclick="toggleMenu()">
-                            <img src="KEPAU Generatoren-Dateien/Button1.png"><a href="#">Menü</a>
-                        </li>
-                        <div id="dropdown-menu" class="dropdown-content">
-                            <li>
-                                <img src="KEPAU Generatoren-Dateien/Button2.png"><a href="#">Home</a>
+        <!-- Main -->
+        <section class="main py-4">
+            <div class="container grid">
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <li id="menu" onclick="toggleMenu()">
+                                <img src="KEPAU Generatoren-Dateien/Button1.png"><a href="#">Menü</a>
                             </li>
-                            <li>
-                                <img src="KEPAU Generatoren-Dateien/Button3.png"><a href="#">Verbindung</a>
-                            </li>
-                            <li>
-                                <img src="KEPAU Generatoren-Dateien/Button4.png"><a href="index.html">Analyse</a>
-                            </li>
-                            <li>
-                                <img src="KEPAU Generatoren-Dateien/Button5.png"><a href="#">Alarme</a>
-                            </li>
-                        </div>
-                    </ul>
-                </nav>
-            </div>
-            <div class="main-content">
-                <div class="heading bg-primary">
-                    Impressum
+                            <div id="dropdown-menu" class="dropdown-content">
+                                <li>
+                                    <img src="KEPAU Generatoren-Dateien/Button2.png"><a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <img src="KEPAU Generatoren-Dateien/Button3.png"><a href="#">Verbindung</a>
+                                </li>
+                                <li>
+                                    <img src="KEPAU Generatoren-Dateien/Button4.png"><a href="index.html">Analyse</a>
+                                </li>
+                                <li>
+                                    <img src="KEPAU Generatoren-Dateien/Button5.png"><a href="#">Alarme</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="text-center my-1">
-                    <h4 class="my-2">Angaben gem. § 5 TMG</h4>
-                    <h4>Kontakt:</h4>
-                    <p>Hidden Industries GmbH<br>
-                        Sophienstraße 40<br>
-                        38118 Braunschweig<br>
-                        Vertreten durch die Geschäftsführer Rieke Muuß, Felix Muuß, Fridolin Muuß, Stephan Diekmann,<br>
-                        Hauke Loges, Ricardo Brodale und Daniel Unger<br>
-                        Amtsgericht Braunschweig HRB 206864</p>
+                <div class="main-content">
+                    <div class="heading bg-primary">
+                        Impressum
+                    </div>
+                    <div class="text-center my-1">
+                        <h4 class="my-2">Angaben gem. § 5 TMG</h4>
+                        <h4>Kontakt:</h4>
+                        <p>Hidden Industries GmbH<br>
+                            Sophienstraße 40<br>
+                            38118 Braunschweig<br>
+                            Vertreten durch die Geschäftsführer Rieke Muuß, Felix Muuß, Fridolin Muuß, Stephan
+                            Diekmann,<br>
+                            Hauke Loges, Ricardo Brodale und Daniel Unger<br>
+                            Amtsgericht Braunschweig HRB 206864</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer bg-secondary py-4">
@@ -86,12 +89,6 @@
             </div>
         </div>
     </footer>
-    <script src="linechart.js"></script>
-    <script>
-        function toggleMenu() {
-            document.getElementById("dropdown-menu").classList.toggle("show");
-        }
-    </script>
 </body>
 
 </html>
