@@ -262,7 +262,8 @@ code, pre {
 .main .grid {
     align-items: flex-start;
     justify-content: left;
-    grid-template-columns: 2fr 8fr;
+    /* grid-template-columns: 2fr 8fr; */ /* ohne navbar */
+    grid-template-columns: 1fr;
     padding: 0;
 }
 
