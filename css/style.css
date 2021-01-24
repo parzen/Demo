@@ -259,11 +259,14 @@ code, pre {
 
 /* Main */
 
+.no-navbar {
+    grid-template-columns: 1fr !important;
+}
+
 .main .grid {
     align-items: flex-start;
     justify-content: left;
-    /* grid-template-columns: 2fr 8fr; */ /* ohne navbar */
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 8fr;
     padding: 0;
 }
 
