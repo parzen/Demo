@@ -33,14 +33,15 @@
 
                 <div class="showcase-form card">
                     <form action="index.php#login_content" name="seriennummer" id="serienummer" method="POST">
-                        <h2>Neues Produkt? Bitte geben Sie hier Ihre Seriennummer ein.</h2>
+                        <h2>Neues Produkt?</h2>
+                        <p>Bitte geben Sie hier Ihre Seriennummer ein.</p>
                         <div class="form-control">
                             <input type="text" name="serialnumber" placeholder="Seriennummer" maxlength="20" required>
                         </div>
                         <input type="submit" value="Seriennummer prüfen" class="btn btn-secondary">
                     </form>
                     <form action="index.php#login_content" name="login" id="login" method="POST">
-                        <h2>Kundenportal</h2>
+                        <h2>Produkt bereits registriert?</h2>
                         <p>Nutzen Sie als Login-Daten die Seriennummer Ihres Gerätes und das Passwort aus der
                             Registrierungs-SMS / dem Registrierungs-Anruf.</p>
                         <div class="form-control">
@@ -75,7 +76,7 @@
                     </div>
                     <div>
                         <i class="fas fa-cogs fa-3x"></i>
-                        <h3>1.304</h3>
+                        <h3 id="daysGone">1.304</h3>
                         <p class="text-secondary">Tage ohne Ausfälle</p>
                     </div>
                 </div>
@@ -118,8 +119,8 @@
                     <hr>
                 </div>
                 <div class="generator grid grid-3">
-                    <img src="images/Generator.png" alt="" class="p-1">
-                    <div class="data1 p-1">
+                    <img src="images/Generator.png" alt="" class="px-1">
+                    <div class="data1 px-1">
                         <div class="text-secondary">
                             Technische Daten
                         </div>
@@ -130,7 +131,7 @@
                         Nennstrom: 43,5 A<br>
                         Frequenz: 50 Hz
                     </div>
-                    <div class="data2 p-1">
+                    <div class="data2 px-1">
                         Bauart: 4 Takt luftgekühlt<br>
                         Kraftstoff: Diesel<br>
                         Tankinhalt (Volumen): 15 Liter<br>
@@ -194,6 +195,18 @@
             document.getElementById("login").classList.toggle("show");
             document.getElementById("serienummer").classList.toggle("hidden");
             document.getElementById("login").classList.toggle("hidden");
+        }
+
+        daysGone();
+        function daysGone() {
+            var one = new Date(2019, 00, 02);
+            var two = new Date();
+
+            var millisecondsPerDay = 1000 * 60 * 60 * 24;
+            var millisBetween = two.getTime() - one.getTime();
+            var days = millisBetween / millisecondsPerDay;
+
+            document.getElementById("daysGone").innerHTML = Math.floor(days);
         }
     </script>
 </body>
