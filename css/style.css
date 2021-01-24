@@ -20,7 +20,7 @@
 
 body {
     font-family: "Myriad Pro", "Fedra Sans Std", Arial;
-    color: #333;
+    /* color: #333; */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -37,11 +37,10 @@ ul {
 
 a {
     text-decoration: none;
-    color: #333
+    color: var(--secondary-color);
 }
 
 h1, h2 {
-    font-weight: 300;
     line-height: 1.2;
     margin: 10px 0;
 }
@@ -79,6 +78,179 @@ code, pre {
 .header img {
     width: 150px;
     justify-self: flex-start;
+}
+
+/* Showcase */
+
+.showcase {
+    height: 500px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+    background-image: url(../images/Background.jpg);
+    background-size: cover;
+    /* skaliert das Bild, so dass es so klein wie möglich ist, aber mindestens so groß wie Maße des Containers */
+    background-position: bottom;
+    /* platziert ausschnitt zentriert, ansonsten fängt er mit der linken bildseite an */
+    background-repeat: no-repeat;
+    /* keine wiederholung wenn Bild kleiner als 350px ist */
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: visible;
+    /* dadurch gibt es keine scrollbar, sondern überlagert nächstes div */
+    grid-template-columns: 2fr 3fr;
+    gap: 30px;
+}
+
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase-form {
+    position: relative;
+    top: 50px;
+    height: 530px;
+    width: 500px;
+    padding: 40px;
+    /* dadurch ist es immer ganz vorne */
+    z-index: 100;
+    /* Damit form rechts anliegt */
+    justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form {
+    background-color: #fff;
+    color: #000;
+}
+
+.showcase-form .btn {
+    margin-bottom: 20px;
+}
+
+.showcase-form .form-control {
+    margin: 15px 0;
+}
+
+.showcase-form input[type='text'], .showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    /* dadurch entfernt man den Kasten um die form wenn man es anklickt und was reinschreiben will */
+    outline: none;
+}
+
+.showcase::before, .showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -50px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+    /* Chrome + Safari */
+    -webkit-transform: skewY(-3deg);
+    /* Mozilla */
+    -moz-transform: skewY(-3deg);
+    /* Microsoft */
+    -ms-transform: skewY(-3deg);
+}
+
+/* Stats */
+
+.stats {
+    padding-top: 140px;
+    animation: slideInFromBottom 1s ease-in;
+}
+
+.stats-heading {
+    /* dadurch ist es in der Mitte */
+    margin: auto;
+}
+
+.stats .grid h3 {
+    font-size: 35px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Features */
+
+.features .grid {
+    align-items: flex-start;
+}
+
+/* Bestseller */
+
+.bestseller .flex {
+    /* RESPONSIVE: Dadurch werden Elemente die nicht in eine Zeile passen automatisch in mehrere geparst */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.bestseller .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    /* Macht die Animation auf transform */
+    transition: transform 0.2s ease-in;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: none;
+}
+
+.bestseller .card:hover {
+    /* shifted uauf Y-Achse um 15px nach oben */
+    transform: translateY(-15px);
+}
+
+.bestseller .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.bestseller h1 {
+    font-size: 30px;
+}
+
+.bestseller h2 {
+    font-weight: normal;
+}
+
+.bestseller .card img {
+    width: 100px;
+}
+
+.bestseller img {
+    width: 35px;
+}
+
+.bestseller .generator img {
+    width: 100%;
+}
+
+/* Rating */
+.rating img {
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 /* Main */
@@ -188,10 +360,6 @@ code, pre {
     margin: 0 10px;
 }
 
-.footer a:hover {
-    font-weight: bold;
-}
-
 /* Animations */
 
 @keyframes slideInFromLeft {
@@ -233,6 +401,37 @@ code, pre {
 /* Tablets and under */
 
 @media(max-width: 768px) {
+    .grid, .showcase .grid, .stats .grid, .features .grid, .features-main .grid, .docs-main .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .showcase {
+        /* damit showcase nicht über was anderen liegt */
+        height: auto;
+    }
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+        animation: slideInFromTop 1s ease-in;
+    }
+    .showcase-form {
+        /* justify-self geht bei grid und flex box; zentriert form an sich */
+        justify-self: center;
+        margin: auto;
+        animation: slideInFromBottom 1s ease-in;
+    }
+    .features-head, .features-sub-head, .docs-head {
+        text-align: center;
+    }
+    .features-head img, .features-sub-head img, .docs-head img {
+        justify-self: center;
+    }
+    .features-main .grid>*:first-child, .features-main .grid>*:nth-child(2) {
+        grid-column: 1;
+    }
+    .feature {
+        text-align: center;
+    }
     .main-content {
         padding: 0;
         height: auto;
@@ -247,6 +446,16 @@ code, pre {
     .dropdown-content {
         display: none;
     }
+    .bestseller .generator {
+        text-align: center;
+    }
+    .bestseller .card img {
+        width: 50px;
+    }
+    .bestseller .card {
+        padding: 10px;
+        margin: 10px;
+    }
 }
 
 /* Mobile */
@@ -254,5 +463,23 @@ code, pre {
 @media(max-width: 500px) {
     .chart-container {
         margin-block-end: 70px;
+    }
+
+    .showcase .showcase-form {
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+
+    .showcase h1 {
+        font-size: 30px;
+    }
+
+    .stats {
+        padding-top: 70px;
+    }
+
+    .bestseller .card h4 {
+        font-size: 15px;
     }
 }

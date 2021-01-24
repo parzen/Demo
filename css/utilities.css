@@ -33,7 +33,16 @@
     transform: scale(.98);
 }
 
+a:hover {
+    font-weight: bold;
+}
+
 /* Backgrounds & colored buttons */
+.bg-none {
+    background-color: inherit;
+    color: var(--secondary-color);
+}
+
 .bg-primary, .btn-primary {
     background-color: var(--primary-color);
 }
