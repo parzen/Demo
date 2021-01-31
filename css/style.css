@@ -71,7 +71,7 @@ code, pre {
 }
 
 .header .flex {
-    justify-content: start;
+    justify-content: space-between;
     padding: 20px 40px;
 }
 
