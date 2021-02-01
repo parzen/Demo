@@ -121,13 +121,11 @@ a:hover {
 }
 
 .alert-success {
-    background-color: var(--success-color);
-    color: #fff;
+    color: var(--success-color);
 }
 
 .alert-error {
-    background-color: var(--error-color);
-    color: #fff;
+    color: var(--error-color);
 }
 
 .flex {
